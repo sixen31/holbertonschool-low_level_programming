@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -z "$CFILE" ]; then
+  echo "Environment variable \$CFILE not set."
+  exit 1
+fi
+
+input_file="$CFILE"
+output_file="${CFILE%.c}.s"
+
+gcc -S -masm=intel "$input_file" -o "$output_file"
+
+if [ $? -eq 0 ]; then
+  echo "Assembly code generated successfully in $output_file"
+else
+  echo "Error generating assembly code"
+fi
