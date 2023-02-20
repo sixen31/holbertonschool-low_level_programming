@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+int main() 
+{
     int n;
     srand(time(NULL));
     n = rand() % 201 - 100; /* generates a random number between -100 and 100 */
