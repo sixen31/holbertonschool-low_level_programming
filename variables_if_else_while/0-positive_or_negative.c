@@ -4,8 +4,6 @@
 
 /**
  * main - Entry point
- * Description: Assigns a random number to n and prints whether the number is
- * positive or negative
  *
  * Return: Always 0 (Success)
  */
@@ -16,19 +14,13 @@ int main(void)
     srand(time(0));
     n = rand() - RAND_MAX / 2;
 
-    /* Check if n is positive, negative or zero */
+    printf("%d is ", n);
     if (n > 0)
-    {
-        printf("%d is positive\n", n);
-    }
-    else if (n < 0)
-    {
-        printf("%d is negative\n", n);
-    }
+        printf("positive\n");
+    else if (n == 0)
+        printf("zero\n");
     else
-    {
-        printf("%d is zero\n", n);
-    }
+        printf("negative\n");
 
     return (0);
 }
