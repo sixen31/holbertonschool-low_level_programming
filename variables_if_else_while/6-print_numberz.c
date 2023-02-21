@@ -1,15 +1,17 @@
 #include <stdio.h>
-#include <unistd.h>
-
+/**
+ * main - Prints all single digit numbers of base 10 starting from 0,
+ *        only using putchar and without char variables.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-int i;
-char digit[2];
-for (i = 0; i < 10; i++)
-{
-digit[0] = (i % 10) + '0';
-write(1, digit, 1);
-}
+int var;
+
+for (var = 0; var < 10; var++)
+putchar((var % 10) + '0');
+
 putchar('\n');
 return (0);
 }
