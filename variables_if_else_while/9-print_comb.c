@@ -1,30 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-/**
- * main - Prints all single digit numbers of base 10 starting from 0,
- *        only using putchar and without char variables.
- *
- * Return: Always 0.
- */
+
 int main(void)
 {
-int i, j, k, l;
-for (i = 0; i < 10; i++)
-for (j = i + 1; j < 10; j++)
-for (k = j + 1; k < 10; k++)
-for (l = k + 1; l < 10; l++)
-putchar(i + '0');
+int x;
+
+for (x = 0; x < 10; x++)
+{
+putchar(x + '0');
+if (x < 9)
+{
 putchar(',');
 putchar(' ');
-putchar(j + '0');
-putchar(',');
-putchar(' ');
-putchar(k + '0');
-putchar(',');
-putchar(' ');
-putchar(l + '0');
-putchar(',');
-putchar(' ');
+}
+}
 putchar('\n');
 return (0);
 }
