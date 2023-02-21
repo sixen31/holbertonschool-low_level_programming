@@ -1,17 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-/**
- * main - Entry point
- *
- * Return: 0
- */
+#include <unistd.h>
+
 int main(void)
 {
-int a;
-
-for (a = 0; a < 10; a++)
-printf("%i", a);
-printf("\n");
+int i;
+char digit[2];
+for (i = 0; i < 10; i++)
+{
+digit[0] = (i % 10) + '0';
+write(1, digit, 1);
+}
+putchar('\n');
 return (0);
 }
