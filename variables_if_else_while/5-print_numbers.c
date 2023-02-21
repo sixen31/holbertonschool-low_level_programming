@@ -4,15 +4,14 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
-int i;
-for (i = 0; i < 10; i++)
-{
-printf("%d ", i);
-}
+int a;
+
+for (a = 0; a < 10; a++)
+printf("%i", a);
 printf("\n");
 return (0);
 }
