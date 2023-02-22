@@ -3,7 +3,6 @@
 /**
  * void print_alphabet - check the code
  *
- *
  */
 void print_alphabet(void)
 {
