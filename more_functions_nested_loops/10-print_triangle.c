@@ -1,15 +1,27 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_triangle - prints a triangle, followed by a new line
+ * @size: input
  */
-int main(void)
+void print_triangle(int size)
 {
-print_triangle(2);
-print_triangle(10);
-print_triangle(1);
-print_triangle(0);
-return (0);
+int x, y;
+
+for (x = 0; x < size; x++)
+{
+for (y = 1; y < (size - x); y++)
+{
+_putchar(' ');
+}
+for (y--; y < size; y++)
+{
+_putchar('#');
+}
+if (x < (size - 1))
+{
+_putchar('\n');
+}
+}
+_putchar('\n');
 }
