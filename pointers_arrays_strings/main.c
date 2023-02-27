@@ -1,13 +1,19 @@
-#include <unistd.h>
+#include <stdio.h>
+
+void reset_to_98(int *);
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * main - check the code for Holberton School students.
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: Always 0.
  */
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
+	int n;
+
+	n = 402;
+	printf("%d\n", n);
+	reset_to_98(&n);
+	printf("%d\n", n);
+	return (0);
 }
