@@ -1,13 +1,16 @@
 #include "main.h"
 #include <stdio.h>
+#include "holberton.h"
+
 /**
- * print_rev - prints a string in reverse
- * @s: the string to print
+ * rev_string - reverses a string in place
+ * @s: the string to reverse
  *
- * This function takes a string as an argument and prints
- * order. The string is passed in using the `@s` parameter.
+ * This function takes a string as an argument and reverses it in place by
+ * swapping characters from the beginning and end of the string until the
+ * entire string has been reversed.
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
 int length = 0;
 int i;
