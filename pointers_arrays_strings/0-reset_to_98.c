@@ -1,0 +1,11 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * main - check the code 
+ *
+ * Return: Always 0.
+ */
+void mettre_a_98(int* pointeur)
+{
+*pointeur = 98;
+}
