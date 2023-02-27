@@ -5,9 +5,9 @@
  * This function computes the length of the string pointed to by the
  * parameter s, excluding the terminating null byte ('\0').
  *
- * @param s Pointer to a null-terminated string.
+ *@param: s Pointer to a null-terminated string.
  *
- * @return The length of the string.
+ *@return: The length of the string.
  */
 int _strlen(char *s)
 {
