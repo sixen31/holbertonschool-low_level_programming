@@ -1,8 +1,13 @@
 #include "main.h"
 /**
- * main - check the code
+ * @brief Swaps the values of two integers.
  *
- * Return: Always 0.
+ * This function swaps the values of the integers pointed to by a and b.
+ *
+ * @param[in,out] a Pointer to the first integer.
+ * @param[in,out] b Pointer to the second integer.
+ *
+ * @return None.
  */
 void swap_int(int *a, int *b)
 {
