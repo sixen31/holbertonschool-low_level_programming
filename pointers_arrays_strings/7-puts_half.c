@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 /**
- *
  * puts_half - Prints the second half of a null-terminated string.
  *
  *@str: Pointer to the null-terminated string to print.
