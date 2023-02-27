@@ -5,7 +5,7 @@
  *
  * Return: Always 0.
  */
-void mettre_a_98(int* pointeur)
+void reset_to_98(int *n)
 {
-*pointeur = 98;
+*n = 98;
 }
