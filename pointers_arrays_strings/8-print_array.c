@@ -3,8 +3,12 @@
 /**
  * Prints the first n elements of an array of integers, separated by commas.
  *
- *@param a The array to print.
- *@param n The number of elements to print.
+ *@param a Pointer to the array of integers to print.
+ *@param n The number of elements in the array to print.
+ * 
+ * The integers are printed in the order they appear in the array, with each 
+ * integer separated by a comma and a space. The function does not print a 
+ * newline character at the end.
  */
 void print_array(int *a, int n)
 {
