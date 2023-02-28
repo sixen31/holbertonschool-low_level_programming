@@ -1,14 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * Prints the first n elements of an array of integers, separated by commas.
+ * print_array - prints the elements of an array of integers
+ * @a: pointer to the array
+ * @n: the number of elements in the array
  *
- *@param a Pointer to the array of integers to print.
- *@param n The number of elements in the array to print.
- * 
- * The integers are printed in the order they appear in the array, with each 
- * integer separated by a comma and a space. The function does not print a 
- * newline character at the end.
+ * Description: This function prints each element of the array
+ * on a separate line, followed by a newline character.
  */
 void print_array(int *a, int n)
 {
