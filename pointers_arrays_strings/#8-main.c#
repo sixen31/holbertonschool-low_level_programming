@@ -1,0 +1,26 @@
+#include "main.h"
+The error message fatal error: min.h: No such file or directory indicates that the compiler was unable to find a file named min.h.
+
+This error can occur for a few different reasons. One possibility is that the file min.h does not exist in the same directory as the source file 8-print_array.c. Double-check that you have spelled the filename correctly and that the file exists in the correct location.
+
+Another possibility is that the file min.h is located in a different directory than the source file, and you need to specify the correct path to the file in the #include directive. In this case, you would need to modify the #include directive to specify the correct path to the file, like #include "path/to/min.h".
+
+It's also possible that min.h is a file specific to your project or library, and you haven't included it in your project directory. If this is the case, make sure that you have the necessary files in your project directory and that you are including them correctly.
+
+/**
+ * main - check the code for
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int array[5];
+
+    array[0] = 98;
+    array[1] = 402;
+    array[2] = -198;
+    array[3] = 298;
+    array[4] = -1024;
+    print_array(array, 5);
+    return (0);
+}

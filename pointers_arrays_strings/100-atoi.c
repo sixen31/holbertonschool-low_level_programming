@@ -1,11 +1,14 @@
 #include <limits.h>
 #include "main.h"
-
 /**
- * _atoi - converts a string to an integer
- * @s: the string to convert
+ * swap_int - Swaps the values of two integers.
  *
- * Return: the integer value of the string
+ * This function swaps the values of the integers pointed to by a and b.
+ *
+ *@param a : Pointer to the first integer.
+ *@param b : Pointer to the second integer.
+ *
+ *@return None.
  */
 int _atoi(char *s)
 {
