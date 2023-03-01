@@ -1,13 +1,8 @@
 #include "main.h"
 /**
- * _strlen - Computes the length of a string.
- *
- * This function computes the length of the string pointed to by the
- * parameter s, excluding the terminating null byte ('\0').
- *
- *@param: s Pointer to a null-terminated string.
- *
- *@return: The length of the string.
+ * _strlen - returns the length of a string.
+ * @s: input string.
+ * Return: length of a string.
  */
 int _strlen(char *s)
 {
