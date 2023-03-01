@@ -10,39 +10,18 @@
 char *cap_string(char *str)
 {
 int i;
+char prev = ' ';
 
 for (i = 0; str[i] != '\0'; i++)
 {
-if (i == 0 || isspace(str[i - 1]))
+if (prev == ' ' || prev == '\t' || prev == '\n' ||
+prev == ',' || prev == ';' || prev == '.' ||
+prev == '!' || prev == '?' || prev == '"' ||
+prev == '(' || prev == ')' || prev == '{' || prev == '}')
 {
 str[i] = toupper(str[i]);
 }
-else
-{
-switch (str[i])
-{
-case ',':
-case ';':
-case '.':
-case '!':
-case '?':
-case '"':
-case '(':
-case ')':
-case '{':
-case '}':
-case '\n':
-case '\t':
-case ' ':
-if (!isspace(str[i - 1]))
-{
-str[i - 1] = toupper(str[i - 1]);
-}
-break;
-default:
-break;
-}
-}
+prev = str[i];
 }
 
 return (str);

@@ -1,46 +1,20 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * reverse_array - reverses the content of an array of integers
- *@a: the array to reverse
- *@n: the number of elements of the array
- * This function is called when the program starts.
- *@return 0 if the program exited successfully, a non-zero value otherwise.
+ * reverse_array - Reverses the content of an array of integers.
+ *@a: The array to modify.
+ *@n: The number of elements of the array.
+ *
+ * Return: Nothing.
  */
 void reverse_array(int *a, int n)
 {
-int i;
-int temp;
+int i, temp;
 
 for (i = 0; i < n / 2; i++)
 {
 temp = a[i];
-a[i] = a[n - i - 1];
-a[n - i - 1] = temp;
+a[i] = a[n - 1 - i];
+a[n - 1 - i] = temp;
 }
-}
-
-int main(void)
-
-{
-int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
-int n = sizeof(a) / sizeof(a[0]);
-int i;
-
-printf("Avant l'inversion : ");
-for (i = 0; i < n; i++)
-{
-printf("%d ", a[i]);
-}
-printf("\n");
-
-reverse_array(a, n);
-
-printf("Après l'inversion : ");
-for (i = 0; i < n; i++)
-{
-printf("%d ", a[i]);
-}
-printf("\n");
-
-return (0);
 }
