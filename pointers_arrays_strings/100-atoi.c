@@ -1,36 +1,30 @@
-#include <limits.h>
 #include "main.h"
 /**
- * swap_int - Swaps the values of two integers.
+ * _atoi - converts a string to an integer
  *
- * This function swaps the values of the integers pointed to by a and b.
+ * @s: string to convert
  *
- *@param a : Pointer to the first integer.
- *@param b : Pointer to the second integer.
- *
- *@return None.
+ * Return: converted integer or 0 if no number is found
  */
 int _atoi(char *s)
 {
 int sign = 1;
 int num = 0;
-int i = 0;
-if (s[i] == '-')
+int started = 0;
+
+while (*s)
 {
-sign = -1;
-i++;
+if (*s == '-')
+sign *= -1;
+else if (*s >= '0' && *s <= '9')
+{
+started = 1;
+num = num * 10 + (*s - '0');
 }
-while (s[i] != '\0')
-{
-if (s[i] >= '0' && s[i] <= '9')
-{
-int digit = s[i] - '0';
-if (num < INT_MIN / 10 || (num == INT_MIN / 10 && digit > 8))
-num = num * 10 - digit;
-}
-else
-i++;
+else if (started)
+break;
+s++;
 }
 
-return (sign *num);
+return (num *sign);
 }
