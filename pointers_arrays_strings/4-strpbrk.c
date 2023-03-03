@@ -1,12 +1,10 @@
 #include "main.h"
-
 /**
  * _strpbrk - Searches a string for any of a set of bytes.
  * @s: The string to search.
  * @accept: The set of bytes to match.
  *
- * Return: If a byte is found - a pointer to the byte in s that matches one of the
- *         bytes in accept. Otherwise, NULL.
+ * Return: 0
  */
 char *_strpbrk(char *s, char *accept)
 {
@@ -20,6 +18,5 @@ if (s[i] == accept[j])
 return (&s[i]);
 }
 }
-
 return (0);
 }
