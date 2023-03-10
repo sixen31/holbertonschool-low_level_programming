@@ -22,7 +22,7 @@ return (_find_sqrt(n, mid + 1, end));
 else
 return (_find_sqrt(n, start, mid - 1));
 }
-return (-1);
+return (1);
 }
 
 /**
