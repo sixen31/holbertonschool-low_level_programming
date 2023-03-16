@@ -1,0 +1,10 @@
+#include <stdio.h>
+/**
+ * The FILE macro is used to represent the name of file compiled
+ * returns the value 0 to indicate that executed correctly
+ */
+int main(void)
+{
+printf("%s\n", __FILE__);
+return (0);
+}
