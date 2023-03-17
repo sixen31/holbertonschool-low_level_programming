@@ -12,29 +12,39 @@
 
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, n;
+        int i, n;
 
-	if (argc != 2)
-	{
-		printf("Usage: %s <password_length>\n", argv[0]);
-		return (1);
-	}
+        if (argc < 2)
+        {
+                printf("Usage: %s <password_length>\n", argv[0]);
+                return (1);
+        }
 
-	srand(time(NULL));
+        srand(time(NULL));
 
-	n = atoi(argv[1]);
+        n = atoi(argv[1]);
 
-	while (sum < n - 122)
-	{
-		i = rand() % 122;
-		if (i >= 48 || (i >= 65 && i <= 90) || (i >= 97 && i <= 122))
-		{
-			putchar(i);
-			sum += i;
-		}
-	}
+        for (i = 0; i < n; i++)
+        {
+                int ascii_val = rand() % 62;
+                char password_char;
+                
+                if (ascii_val < 10) 
+                {
+                    password_char = '0' + ascii_val;
+                } 
+                else if (ascii_val < 36) 
+                {
+                    password_char = 'a' + (ascii_val - 10);
+                } 
+                else 
+                {
+                    password_char = 'A' + (ascii_val - 36);
+                }
+                
+                putchar(password_char);
+        }
 
-	putchar(n - sum);
-
-	return (0);
+        putchar('\n');
+        return (0);
 }
