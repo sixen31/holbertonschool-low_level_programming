@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include "dog.h"
+    /* Allocation de mémoire pour la structure du chien */
+dog_t *new_dog(char *name, float age, char *owner);
+{
+dog_t *dog;
+dog = malloc(sizeof(dog_t));
+if (dog == NULL)
+return (NULL);
+        /* Allouer de la mémoire pour le nom et le copier */
+dog->name = malloc(strlen(name) + 1);
+if (dog->name == NULL)
+{
+
+free(dog);
+return (NULL);
+}
+    /* Allouer de la mémoire pour le propriétaire et le copier */
+
+
+     /* Fixer l'âge */
