@@ -1,0 +1,7 @@
+4-new_dog.c:16: warning: no description found for function new_dog
+4-new_dog.c:16: warning: No description found for parameter or member 'name'
+4-new_dog.c:16: warning: No description found for parameter or member 'age'
+4-new_dog.c:16: warning: No description found for parameter or member 'owner'
+4-new_dog.c:16: warning: No description found for return value of 'new_dog'
+new_dog
+0;136;0c
