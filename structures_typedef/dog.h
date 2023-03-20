@@ -1,6 +1,6 @@
 #ifndef DOG_H
 #define DOG_H
-
+#include <stddef.h>
 /**
  * struct dog - a structure representing a dog
  * @name: a pointer to the dog's name
