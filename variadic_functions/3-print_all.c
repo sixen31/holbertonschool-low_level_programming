@@ -1,43 +1,90 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "variadic_functions.h"
+
 /**
- * print_all - prints any combination of char, int, float, and string arguments
- *
- * @format: a list of types of arguments passed to the function:
- * Return: void
+ * print_char - print char type element from va_list
+ * @list: va_list passed to function
+ */
+void print_char(va_list list)
+{
+	printf("%c", va_arg(list, int));
+}
+
+/**
+ * print_int - print int type element from va_list
+ * @list: va_list passed to function
+ */
+void print_int(va_list list)
+{
+	printf("%d", va_arg(list, int));
+}
+
+/**
+ * print_str - print string element from va_list
+ * @list: va_list passed to function
+ */
+void print_str(va_list list)
+{
+	char *string;
+
+	string = va_arg(list, char*);
+	if (string == NULL)
+	{
+		string = "(nil)";
+	}
+	printf("%s", string);
+}
+
+/**
+ * print_float - print float type element from va_list
+ * @list: va_list passed to function
+ */
+void print_float(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+
+/**
+ * print_all - print anything passed if char, int, float, or string.
+ * @format: string of formats to use and print
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0;
+	unsigned int i, j;
 	char *s;
+	va_list list;
 
-	va_start(args, format);
+	checker storage[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_str},
+		{'\0', NULL}
+	};
 
-	while (format && format[i])
+	i = 0;
+	j = 0;
+	s = "";
+
+	va_start(list, format);
+	while (format != NULL && format[i] != '\0')
 	{
-		switch (format[i])
+		while (j < 4)
 		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%f", (float)va_arg(args, double));
-				break;
-			case 's':
-				s = va_arg(args, char *);
-				if (s == NULL)
-					printf("(nil)");
-				else
-					printf("%s", s);
-				break;
+			if (format[i] == *storage[j].type)
+			{
+				printf("%s", s);
+				storage[j].function(list);
+				s = ", ";
+			}
+			j++;
 		}
 		i++;
+		j = 0;
 	}
+
 	printf("\n");
-	va_end(args);
+	va_end(list);
 }
