@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * binary_search - Recherche une valeur dans un tableau trié d'entiers 
+ * binary_search - Recherche une valeur dans un tableau trié d'entiers
  * en utilisant l'algorithme de recherche binaire.
  *
  * @array: Pointeur vers le premier élément du tableau à rechercher.
@@ -10,7 +10,7 @@
  * @value: Valeur à rechercher.
  *
  * Return: L'index où la valeur se trouve.
- * Si la valeur n'est pas présente dans le tableau ou si le tableau 
+ * Si la valeur n'est pas présente dans le tableau ou si le tableau
  * est NULL, retourne -1.
  */
 int binary_search(int *array, size_t size, int value)
