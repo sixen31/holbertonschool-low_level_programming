@@ -1,14 +1,17 @@
 #include "search_algos.h"
+#include <stdio.h>
 
 /**
- * binary_search - Searches for a value in a sorted array of integers using the Binary search algorithm
+ * binary_search - Recherche une valeur dans un tableau trié d'entiers 
+ * en utilisant l'algorithme de recherche binaire.
  *
- * @array: Pointer to the first element of the array to search in
- * @size: Number of elements in array
- * @value: Value to search for
+ * @array: Pointeur vers le premier élément du tableau à rechercher.
+ * @size: Nombre d'éléments dans le tableau.
+ * @value: Valeur à rechercher.
  *
- * Return: The index where value is located
- *         If value is not present in array or if array is NULL, return -1
+ * Return: L'index où la valeur se trouve.
+ * Si la valeur n'est pas présente dans le tableau ou si le tableau 
+ * est NULL, retourne -1.
  */
 int binary_search(int *array, size_t size, int value)
 {
@@ -36,20 +39,22 @@ int binary_search(int *array, size_t size, int value)
 }
 
 /**
- * print_array - Prints an array of integers
+ * print_array - Affiche un tableau d'entiers.
  *
- * @array: Pointer to the first element of the array to print
- * @left: Starting index of the array to print
- * @right: Ending index of the array to print
+ * @array: Pointeur vers le premier élément du tableau à afficher.
+ * @left: Indice de début du tableau à afficher.
+ * @right: Indice de fin du tableau à afficher.
  */
 void print_array(int *array, size_t left, size_t right)
 {
 	size_t i;
 
 	printf("Searching in array: ");
-
-	for (i = left; i < right; i++)
-		printf("%d, ", array[i]);
-
-	printf("%d\n", array[i]);
+	for (i = left; i <= right; i++)
+	{
+		printf("%d", array[i]);
+		if (i != right)
+			printf(", ");
+	}
+	printf("\n");
 }
